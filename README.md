@@ -1,4 +1,4 @@
-# Símbolos por si estoy en el teclado peque.
+# Símbolos.
 <>
 `´¨[]$
 ({ })
