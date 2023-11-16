@@ -4,7 +4,7 @@ function saludar (nombre) {
     return `Hola ${nombre}`
 }
 // Lo mismo version flecha
-// const saludar = (nombre) => console.log("Hola", nombre);
+// const saludar = (nombre) => `Hola ${nombre}`
 // saludar("Daniel");
 
 // ¿Y si queremos exportar una segunda función?
