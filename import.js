@@ -1,4 +1,4 @@
-// Importación de módulo/s. (Van en una constante.)
+// Importación de módulo/s. (Van en una constante. = require)
 const saludos = require("./saludos.js");
 
 // accedemos a la variable saludo, esta incluye un objeto donde esta la funcion saludar,
