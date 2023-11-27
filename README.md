@@ -2,6 +2,7 @@
 <>
 `´¨[]$
 ({ })
+= () => {}
 
 ## para ejecutar el archivo
 1) Consola

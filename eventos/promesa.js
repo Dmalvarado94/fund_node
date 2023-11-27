@@ -1,6 +1,7 @@
 // resolve = Exitosa  // reject = Rechazada
-
-const promesaCumplida = true;
+// Factor detonante
+const promesaCumplida = false;
+// Creamos el objeto con la promesa y dentro una Asincronía
 const miPromesa = new Promise((resolve, reject) => { 
     setTimeout(() => { 
         if(promesaCumplida) { 
@@ -10,8 +11,13 @@ const miPromesa = new Promise((resolve, reject) => {
         }
     }, 3000);
 });
-// Aqui otorgamos el resolve dentro de 'valor' y además la imprimimos.
-miPromesa.then((valor) => { 
+// Ahora manejamos la promesa Cumplida & Rechazada en constantes independientes.
+const manejarPromesaCumplida = (valor) => { 
     console.log(valor);
-})
+};
+const manejarPromesaRechazada = (razonRechazo) => { 
+    console.log(razonRechazo);
+};
+// Finalmente en la promesa principal.then()  encapsulamos el resolve y reject
+miPromesa.then(manejarPromesaCumplida, manejarPromesaRechazada);
 
