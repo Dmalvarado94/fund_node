@@ -34,7 +34,7 @@ function ordenarProducto(producto) {
 //     .catch(error => {
 //         console.log(error);
 //     });
-
+// Se recomienda trabajar con async await ya que funciona linea x linea
 async function realizarPedido(producto){
     try{
     const respuesta = await ordenarProducto(producto);   

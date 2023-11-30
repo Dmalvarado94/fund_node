@@ -1,0 +1,22 @@
+// Aqui practicamos con la extension Rest Client. (Haz click en send Request)
+POST http://localhost:8080/
+
+
+// Estructura de una URL (Direccion de un recurso en la WEB)
+https://www.freecodecamp.org/espanol/
+// https: (Protocolo)
+// www: (Subdominio (informacion adicional al inicio de la web))
+// freecodecamp: (Dominio - Referencia unica a un sitio web)
+// .org: (Dominio de nivel superior, pueden ser .com, .gob, etc.)
+// /espanol/:  (Path o camino, estos pueden tener parametros)
+
+// Ejemplo: Parametros Query (?q = query, contenido dinámico y filtrar una lista de recursos)
+https://www.google.com/search?q=cursos+de+node
+// ?q -> Clave
+// =cursos+de+node  -> Valor
+// Si son muchas Query Parathms se separan con un &, EJ:
+https://www.google.com/?q=cursos+de+node&sourceid=chrome&ie=UTF-8
+
+// Ejemplo parametro de ruta, personaliza la URL 
+https://www.ejemplo.com/usuarios/14
+
