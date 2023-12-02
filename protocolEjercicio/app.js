@@ -35,7 +35,7 @@ function manejarSolicitudGET(req, res) {
    
     // Si no encuentra ningun path condiciono un 404.
     res.statusCode = 404;
-    res.end('El recurso solicitado no existe...');
+    res.end('El recurso solicitado no existe...');  // End imprime en pantalla
 }
 
 function manejarSolicitudPOST(req, res) {
@@ -44,15 +44,16 @@ function manejarSolicitudPOST(req, res) {
     if (path === '/cursos/programacion') {
      
         let cuerpo = '';
-        // Met.on (El evento data es default, trae info o contenido, luego iremos metiendo esa info dentro de Cuerpo.)
+        // Met.on (El evento 'data' es default, trae info o contenido, luego iremos metiendo esa info dentro de Cuerpo que venia vacío.)
+        // Concatena los datos recibidos y los convierte a cadena (string)
         req.on('data', contenido => {
             cuerpo += contenido.toString();
         });
-
+        // Este evento 'end' se dispara cuando se han recibido todos los datos de la solicitud
         req.on('end', () => {
             console.log(cuerpo);  
             console.log(typeof cuerpo);  // String // Corrobora que llegue el dato
-            cuerpo = JSON.parse(cuerpo);
+            cuerpo = JSON.parse(cuerpo); // Convierte la cadena JSON en un objeto JavaScript
             console.log(typeof cuerpo); 
             console.log(cuerpo.titulo);  // titulo viene del JSON de index.http POST
             res.end('El servidor recibio una solicitud POST para cursos/programacion');
