@@ -1,3 +1,11 @@
-POST http://localhost:8080/cursos/programacion
-
 // Probando extension viewer con el metodo POST de app.js
+POST http://localhost:8080/cursos/matematicas
+###
+POST http://localhost:8080/cursos/programacion 
+    Content-Type: application/json
+
+    {
+        "titulo": "Aprende Node.js"
+    }
+    
+###
